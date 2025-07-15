@@ -85,6 +85,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Use a dark base color so transparent elements don't show white */
+    @apply bg-black text-foreground;
   }
 }
