@@ -89,6 +89,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Match the dark background used in the pages */
+    @apply bg-black text-foreground;
   }
 }
