@@ -6,7 +6,10 @@ import {
   Utensils,
   ShowerHeadIcon as Shower,
 } from "lucide-react";
-import SharedLayout, { PageHeader } from "@/components/shared-layout";
+import SharedLayout, {
+  PageHeader,
+  SecondaryButton,
+} from "@/components/shared-layout";
 
 export default function PracticalPage() {
   return (
@@ -60,7 +63,7 @@ export default function PracticalPage() {
         {/* Facilities */}
         <div className="space-y-6">
           <div className="flex items-start space-x-4">
-            <ParkingCircle className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+            <ParkingCircle className="w-6 h-6 text-amber-500 mt-1 flex-shrink-0" />
             <div>
               <h2 className="text-xl font-semibold text-amber-100 mb-2">
                 Parkeren
@@ -73,7 +76,7 @@ export default function PracticalPage() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <Utensils className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+            <Utensils className="w-6 h-6 text-amber-500 mt-1 flex-shrink-0" />
             <div>
               <h2 className="text-xl font-semibold text-amber-100 mb-2">
                 Eten & Drinken
@@ -86,7 +89,7 @@ export default function PracticalPage() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <Shower className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
+            <Shower className="w-6 h-6 text-amber-500 mt-1 flex-shrink-0" />
             <div>
               <h2 className="text-xl font-semibold text-amber-100 mb-2">
                 Faciliteiten
@@ -115,13 +118,10 @@ export default function PracticalPage() {
         </ul>
       </div>
 
-      <div className="mt-8 text-center">
-        <a
-          href="mailto:steengoedfestival@gmail.com"
-          className="inline-block bg-orange-900 text-white px-8 py-3 rounded-lg hover:bg-orange-800 transition-colors font-medium"
-        >
+      <div className="mt-8">
+        <SecondaryButton href="mailto:steengoedfestival@gmail.com">
           Contact voor meer info
-        </a>
+        </SecondaryButton>
       </div>
     </SharedLayout>
   );

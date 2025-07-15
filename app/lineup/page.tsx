@@ -1,6 +1,9 @@
 import { Music, Clock } from "lucide-react";
 import Link from "next/link";
-import SharedLayout, { PageHeader } from "@/components/shared-layout";
+import SharedLayout, {
+  PageHeader,
+  SecondaryButton,
+} from "@/components/shared-layout";
 
 export default function LineupPage() {
   return (
@@ -26,19 +29,13 @@ export default function LineupPage() {
           </p>
         </div>
 
-        <div className="space-y-4">
-          <Link
-            href="/announcements"
-            className="inline-block bg-orange-900 text-white px-8 py-3 rounded-lg hover:bg-orange-800 transition-colors font-medium mr-4"
-          >
-            Bekijk Announcements
+        <div className="space-y-4 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4">
+          <Link href="/announcements">
+            <SecondaryButton>Bekijk Announcements</SecondaryButton>
           </Link>
-          <a
-            href="mailto:steengoedfestival@gmail.com"
-            className="inline-block border-2 border-orange-900 text-orange-900 px-8 py-3 rounded-lg hover:bg-orange-900 hover:text-white transition-colors font-medium"
-          >
+          <SecondaryButton href="mailto:steengoedfestival@gmail.com">
             Stel een Vraag
-          </a>
+          </SecondaryButton>
         </div>
       </div>
     </SharedLayout>

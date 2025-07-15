@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import TicketButton from "@/components/ticket-button";
+import EmailButton from "@/components/email-button";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -12,8 +13,31 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Steengoed Festival",
-  description: "Welkom bij Steengoed Festival - Een unieke festival ervaring",
+  description: "Het beste festival van Nederland",
   generator: "Next.js",
+  robots: "noindex, nofollow",
+  icons: {
+    icon: [
+      {
+        url: "/favicon-96x96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/favicon.ico",
+    apple: {
+      url: "/apple-touch-icon.png",
+      sizes: "180x180",
+    },
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: "Steengoed Festival",
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +49,7 @@ export default function RootLayout({
     <html lang="nl" className={montserrat.variable}>
       <body className={montserrat.className}>
         {children}
+        <EmailButton />
         <TicketButton />
       </body>
     </html>

@@ -4,7 +4,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import SharedLayout, { PageHeader } from "@/components/shared-layout";
+import SharedLayout, {
+  PageHeader,
+  SecondaryButton,
+} from "@/components/shared-layout";
 
 export default function FAQPage() {
   return (
@@ -99,14 +102,11 @@ export default function FAQPage() {
         </AccordionItem>
       </Accordion>
 
-      <div className="mt-12 text-center">
+      <div className="mt-12">
         <p className="text-amber-100/80 mb-4">Heb je nog andere vragen?</p>
-        <a
-          href="mailto:steengoedfestival@gmail.com"
-          className="inline-block bg-orange-900 text-white px-8 py-3 rounded-lg hover:bg-orange-800 transition-colors font-medium"
-        >
+        <SecondaryButton href="mailto:steengoedfestival@gmail.com">
           Stuur ons een email
-        </a>
+        </SecondaryButton>
       </div>
     </SharedLayout>
   );

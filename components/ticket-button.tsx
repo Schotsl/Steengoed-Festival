@@ -36,13 +36,13 @@ export default function TicketButton() {
   return (
     <>
       {/* Floating Ticket Button */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 group">
+      <div className="fixed bottom-8 right-8 md:bottom-8 md:right-12 z-50">
         <button
           onClick={() => setShowModal(true)}
-          className="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-4 py-3 rounded-full shadow-xl transition-all duration-300 ease-in-out flex items-center space-x-3 hover:px-6 min-w-max"
+          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-4 rounded-full shadow-xl transition-all duration-300 ease-in-out flex items-center space-x-3 hover:px-8"
         >
           <Ticket className="w-5 h-5 flex-shrink-0" />
-          <span className="font-semibold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 max-w-0 group-hover:max-w-xs overflow-hidden whitespace-nowrap">
+          <span className="font-semibold text-sm whitespace-nowrap">
             Koop je ticket nu
           </span>
         </button>
