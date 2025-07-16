@@ -33,7 +33,7 @@ export default function FAQPage() {
         </AccordionItem>
 
         <AccordionItem
-          value="time"
+          value="where-2"
           className="border border-white/20 bg-white/5 rounded-lg px-6"
         >
           <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
