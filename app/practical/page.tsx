@@ -83,9 +83,7 @@ export default function PracticalPage() {
               <h2 className="text-xl font-semibold text-amber-100 mb-2">
                 Parkeren
               </h2>
-              <p className="text-amber-100/90">
-                Zie hierboven: Harlingen Haven – P1/P2/P3.
-              </p>
+              <p className="text-amber-100/90">Harlingen Haven – P1/P2/P3.</p>
             </div>
           </div>
 

@@ -33,6 +33,18 @@ export default function FAQPage() {
         </AccordionItem>
 
         <AccordionItem
+          value="time"
+          className="border border-white/20 bg-white/5 rounded-lg px-6"
+        >
+          <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
+            Waar is het festival?
+          </AccordionTrigger>
+          <AccordionContent className="text-amber-100/90 pt-0">
+            Steengoed Festival vindt plaats in de tuin van Steengoed.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem
           value="sleep"
           className="border border-white/20 bg-white/5 rounded-lg px-6"
         >
@@ -140,9 +152,7 @@ export default function FAQPage() {
           <AccordionContent className="text-amber-100/90 pt-0">
             <ul className="list-disc pl-5 space-y-1">
               <li>Parkeren & tanken (reken op €10-€15 p.p.)</li>
-              <li>
-                Mini-veertje van Terschelling naar Schengen (€3-€4 per rit)
-              </li>
+              <li>Bus van West-Terschelling naar Steengoed</li>
             </ul>
           </AccordionContent>
         </AccordionItem>
