@@ -25,7 +25,7 @@ export default function AnnouncementsPage() {
           </p>
           <SecondaryButton
             href="/files/Steengoed Festival Praktische Follow up Flyer.pdf"
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 justify-start"
           >
             <Download className="w-4 h-4" />
             <span>Download Flyer 2 – Praktische Info (PDF)</span>
@@ -45,7 +45,7 @@ export default function AnnouncementsPage() {
           </p>
           <SecondaryButton
             href="/files/Steengoed Festival Announcement Flyer.pdf"
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 justify-start"
           >
             <Download className="w-4 h-4" />
             <span>Download Flyer 1 – Announcement (PDF)</span>
