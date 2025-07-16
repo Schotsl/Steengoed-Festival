@@ -11,47 +11,45 @@ export default function AnnouncementsPage() {
 
       {/* Latest Updates */}
       <div className="space-y-8">
-        <div className="border-l-4 border-orange-500 pl-6">
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <h2 className="text-2xl font-semibold text-amber-100">
-                Ledenlijst Beschikbaar
-              </h2>
-              <p className="text-sm text-amber-200/70 mt-1">15 december 2024</p>
-            </div>
-            <span className="text-sm text-amber-900 bg-amber-200 px-3 py-1 rounded-full">
-              Nieuw
-            </span>
-          </div>
-          <p className="text-amber-100/90 mb-4">
-            De officiële ledenlijst voor Steengoed Festival is nu beschikbaar.
-            Download het document hieronder voor alle belangrijke informatie.
-          </p>
-          <SecondaryButton className="flex items-center space-x-2">
-            <Download className="w-4 h-4" />
-            <span>Download Ledenlijst PDF</span>
-          </SecondaryButton>
-        </div>
-
         <div className="border-l-4 border-purple-500 pl-6">
           <div className="mb-4">
             <h2 className="text-2xl font-semibold text-amber-100">
-              Website Gelanceerd
+              Flyer 2 – Praktische Follow-Up
             </h2>
-            <p className="text-sm text-amber-200/70 mt-1">10 december 2024</p>
+            <p className="text-sm text-amber-200/70 mt-1">16-07-2025</p>
           </div>
-          <p className="text-amber-100/90">
-            Welkom op de officiële Steengoed Festival website! Hier vind je alle
-            updates, praktische informatie en binnenkort ook de line-up en
-            programma details.
+          <p className="text-amber-100/90 mb-4">
+            De praktische follow-up met o.a. ticketprijs, datum, website en
+            eerste DJ-announcement (DEIBEATO!). Ideaal om te delen of nog even
+            terug te lezen.
           </p>
+          <SecondaryButton
+            href="/files/Steengoed Festival Praktische Follow up Flyer.pdf"
+            className="flex items-center space-x-2"
+          >
+            <Download className="w-4 h-4" />
+            <span>Download Flyer 2 – Praktische Info (PDF)</span>
+          </SecondaryButton>
         </div>
 
-        {/* Placeholder for future announcements */}
-        <div className="border-2 border-dashed border-orange-300 rounded-lg p-8 text-center">
-          <p className="text-orange-300 font-medium">
-            Meer updates volgen binnenkort...
+        <div className="border-l-4 border-blue-500 pl-6">
+          <div className="mb-4">
+            <h2 className="text-2xl font-semibold text-amber-100">
+              Flyer 1 – Eerste Aankondiging
+            </h2>
+            <p className="text-sm text-amber-200/70 mt-1">16-07-2025</p>
+          </div>
+          <p className="text-amber-100/90 mb-4">
+            Onze eerste officiële festivalflyer! De kickoff van het Steengoed
+            Festival, met alle basisinfo en uitnodiging voor aanmelding.
           </p>
+          <SecondaryButton
+            href="/files/Steengoed Festival Announcement Flyer.pdf"
+            className="flex items-center space-x-2"
+          >
+            <Download className="w-4 h-4" />
+            <span>Download Flyer 1 – Announcement (PDF)</span>
+          </SecondaryButton>
         </div>
       </div>
     </SharedLayout>
