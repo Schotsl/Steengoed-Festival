@@ -24,11 +24,27 @@ export default function FAQPage() {
           className="border border-white/20 bg-white/5 rounded-lg px-6"
         >
           <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
-            Hoe laat begint het festival?
+            Wanneer begint het festival?
           </AccordionTrigger>
-          <AccordionContent className="text-amber-100/90 pt-4">
-            Het festival begint op [datum] om [tijd]. Houd de announcements
-            pagina in de gaten voor de exacte tijden en het volledige programma.
+          <AccordionContent className="text-amber-100/90 pt-0">
+            Het festival vindt plaats op zaterdag 6 september en begint rond
+            15:00 uur.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem
+          value="sleep"
+          className="border border-white/20 bg-white/5 rounded-lg px-6"
+        >
+          <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
+            Hoe ziet het verblijf eruit?
+          </AccordionTrigger>
+          <AccordionContent className="text-amber-100/90 pt-0">
+            We hebben plek voor 13-14 mensen binnen (huis + bungalow). In totaal
+            zijn we met zo'n 18 mensen, dus 4-5 mensen slapen in een tent. Indy,
+            Vincent en Pim hebben al aangeboden in een tent te slapen — dus dat
+            helpt. Wil je graag een binnenplek? Stuur ons dan even een mailtje:
+            steengoedfestival@gmail.com.
           </AccordionContent>
         </AccordionItem>
 
@@ -39,24 +55,10 @@ export default function FAQPage() {
           <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
             Moet ik iets meenemen?
           </AccordionTrigger>
-          <AccordionContent className="text-amber-100/90 pt-4">
-            Breng je eigen drankje, een goede stemming en eventueel een kleedje
-            mee om op te zitten. Verdere details volgen in de praktische
-            informatie.
-          </AccordionContent>
-        </AccordionItem>
-
-        <AccordionItem
-          value="sleep"
-          className="border border-white/20 bg-white/5 rounded-lg px-6"
-        >
-          <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
-            Kan ik blijven slapen?
-          </AccordionTrigger>
-          <AccordionContent className="text-amber-100/90 pt-4">
-            Er zijn mogelijkheden om te kamperen. Neem contact op via
-            steengoedfestival@gmail.com voor meer informatie over
-            overnachtingsmogelijkheden.
+          <AccordionContent className="text-amber-100/90 pt-0">
+            In principe niet. Alles is geregeld — van eten tot drank, enhancers
+            en ganja. Als je een eigen headphone + AUX-kabel hebt, neem die dan
+            mee. Heb je die niet? Geen probleem, dan fixen wij eentje voor je.
           </AccordionContent>
         </AccordionItem>
 
@@ -67,10 +69,20 @@ export default function FAQPage() {
           <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
             Hoe kom ik er?
           </AccordionTrigger>
-          <AccordionContent className="text-amber-100/90 pt-4">
-            Bekijk de 'Praktische Info' pagina voor gedetailleerde
-            routebeschrijvingen met de auto en het openbaar vervoer, plus
-            informatie over parkeren.
+          <AccordionContent className="text-amber-100/90 pt-0">
+            We vertrekken op vrijdag 5 september met de boot van 19:55 vanaf
+            Harlingen. Aanwezig om 19:30 sharp.
+            <br />
+            <br />
+            Je kunt er komen met de auto (carpoolen encouraged!) of het OV.
+            Reken bij 3 personen in een auto op max €15 p.p. voor tanken +
+            parkeren. Parkeren kan bij Harlingen Haven.
+            <br />
+            <br />
+            Let op: de bootkosten van Harlingen naar Terschelling zijn
+            inbegrepen, maar je betaalt wel nog zelf de bus van
+            West-Terschelling naar het huisje in Formerum (€3 - €4, enkele
+            reis).
           </AccordionContent>
         </AccordionItem>
 
@@ -81,9 +93,9 @@ export default function FAQPage() {
           <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
             Is er eten en drinken beschikbaar?
           </AccordionTrigger>
-          <AccordionContent className="text-amber-100/90 pt-4">
-            Er zal eten en drinken beschikbaar zijn op het festival. Meer
-            details over de catering en prijzen volgen binnenkort.
+          <AccordionContent className="text-amber-100/90 pt-0">
+            Zeker. Alles is inbegrepen: ontbijt, lunch, diner, snacks, drankjes
+            (alcohol + non- alcohol), en andere verantwoorde ondeugendheden.
           </AccordionContent>
         </AccordionItem>
 
@@ -94,18 +106,52 @@ export default function FAQPage() {
           <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
             Hoe krijg ik tickets?
           </AccordionTrigger>
-          <AccordionContent className="text-amber-100/90 pt-4">
-            Ticket informatie wordt binnenkort bekendgemaakt. Houd de
-            announcements pagina in de gaten of neem contact op via
-            steengoedfestival@gmail.com.
+          <AccordionContent className="text-amber-100/90 pt-0">
+            Tickets kosten €200 all-in. Aanmelden kan onderstaand.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem
+          value="included"
+          className="border border-white/20 bg-white/5 rounded-lg px-6"
+        >
+          <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
+            Wat is inbegrepen in die €200?
+          </AccordionTrigger>
+          <AccordionContent className="text-amber-100/90 pt-0">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Verblijf (huis, tent of bungalow)</li>
+              <li>Boottickets vanaf Harlingen (heen en terug)</li>
+              <li>Eten & drinken (alles!)</li>
+              <li>Silent Disco gear</li>
+              <li>Ganja, drankj, cigs, pills</li>
+              <li>Productiekosten: flyers, website, props & techniek</li>
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem
+          value="not-included"
+          className="border border-white/20 bg-white/5 rounded-lg px-6"
+        >
+          <AccordionTrigger className="text-left text-lg font-semibold text-amber-100 hover:text-orange-300">
+            Wat is niet inbegrepen?
+          </AccordionTrigger>
+          <AccordionContent className="text-amber-100/90 pt-0">
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Parkeren & tanken (reken op €10-€15 p.p.)</li>
+              <li>
+                Mini-veertje van Terschelling naar Schengen (€3-€4 per rit)
+              </li>
+            </ul>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
 
       <div className="mt-12">
-        <p className="text-amber-100/80 mb-4">Heb je nog andere vragen?</p>
+        <p className="text-amber-100/80 mb-4">Heb je nog een andere vraag?</p>
         <SecondaryButton href="mailto:steengoedfestival@gmail.com">
-          Stuur ons een email
+          Mail ons gerust
         </SecondaryButton>
       </div>
     </SharedLayout>
