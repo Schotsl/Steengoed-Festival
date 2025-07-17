@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { X, Ticket, Mail, CheckCircle } from "lucide-react";
+import { X, Ticket, Mail, CheckCircle, Calendar } from "lucide-react";
 
 export default function TicketButton() {
   const [showModal, setShowModal] = useState(false);
@@ -78,8 +78,22 @@ export default function TicketButton() {
 
   return (
     <>
-      {/* Floating Ticket Button */}
-      <div className="fixed bottom-8 right-8 md:bottom-8 md:right-12 z-50">
+      {/* Floating Buttons */}
+      <div className="fixed bottom-8 right-8 md:bottom-8 md:right-12 z-50 flex flex-col space-y-3">
+        {/* Plan je sessie Button */}
+        <a
+          href="https://calendar.app.google/zFfxXRjPXTDXmJmJ9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-6 py-4 rounded-full shadow-xl transition-all duration-300 ease-in-out flex items-center space-x-3 hover:px-8"
+        >
+          <Calendar className="w-5 h-5 flex-shrink-0" />
+          <span className="font-semibold text-sm whitespace-nowrap">
+            Plan je sessie
+          </span>
+        </a>
+
+        {/* Ticket Button */}
         <button
           onClick={openModal}
           className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-4 rounded-full shadow-xl transition-all duration-300 ease-in-out flex items-center space-x-3 hover:px-8"
@@ -184,7 +198,10 @@ export default function TicketButton() {
                   </div>
 
                   <div className="text-xs md:text-sm text-gray-500">
-                    <p>Scan met je telefoon camera of QR code scanner, of gebruik onderstaande knop als je al op je mobiel bent:</p>
+                    <p>
+                      Scan met je telefoon camera of QR code scanner, of gebruik
+                      onderstaande knop als je al op je mobiel bent:
+                    </p>
                   </div>
 
                   {/* Tikkie button for mobile */}
