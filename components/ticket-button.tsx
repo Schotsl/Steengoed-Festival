@@ -189,7 +189,7 @@ export default function TicketButton() {
 
                   {/* Tikkie button for mobile */}
                   <a
-                    href="https://tikkie.me/pay/your-tikkie-link"
+                    href="https://tikkie.me/pay/55g7ib1i28sjg2if5t8b"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold transition-colors duration-200 inline-block text-center"
