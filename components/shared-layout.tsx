@@ -95,6 +95,12 @@ export default function SharedLayout({
               >
                 Praktische Info
               </Link>
+              <Link
+                href="/ledenlijst"
+                className="text-amber-100 hover:text-orange-300 transition-colors font-medium bg-black/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20"
+              >
+                Ledenlijst
+              </Link>
             </div>
           </div>
         </nav>
@@ -137,6 +143,13 @@ export default function SharedLayout({
                       className="block text-gray-800 hover:text-orange-600 transition-colors font-medium text-lg py-3 border-b border-gray-100"
                     >
                       Praktische Info
+                    </Link>
+                    <Link
+                      href="/ledenlijst"
+                      onClick={closeMobileMenu}
+                      className="block text-gray-800 hover:text-orange-600 transition-colors font-medium text-lg py-3 border-b border-gray-100"
+                    >
+                      Ledenlijst
                     </Link>
 
                     {/* Logo with extra padding above */}
