@@ -15,103 +15,103 @@ import { Card, CardContent } from "@/components/ui/card";
 const attendingMembers = [
   {
     name: "Max",
-    image: "Max.png",
+    image: "Max-256.png",
     description:
       "Deze jongen laat geen sporen na als die over drempels hopt. We hebben als organisatie flink in de archieven moeten duiken om een foto te vinden. Maar we hebben hem gevonden. En ja, je gaat hem natuurlijk terugvinden op Steengoed Festival!",
   },
   {
     name: "Pim vH VIP",
-    image: "Pim.png",
+    image: "Pim-256.png",
     description:
       "Je kent hem van de Saloen, je kent hem van Losgelaten. Het is de enige echte! De leipste de gekste! Thisssssssss je boy!",
   },
   {
     name: "Aaron",
-    image: "Aaron.png",
+    image: "Aaron-256.png",
     description:
       "Wow wat een lokken, deze gozer is niet alleen een wizard met lichten maar mag ook zeker niet licht genomen worden op zijn stem! Na zijn one take van vorig jaar kijken we zeker uit wat hij dit jaar zal cooken.",
   },
   {
     name: "Arnoud",
-    image: "Arnoud.png",
+    image: "Arnoud-256.png",
     description:
       "Arrrrrrrrrrnicle. Guitar Master Blaser. Dit jaar gaan we zo hard dat niet alleen Arnoud out gaat, maar jullie allemaal. En wij hebben zo'n vermoeden dat onze lieve Arnoud hier wel een rol in gaan spelen!",
   },
   {
     name: "Indy VIP",
-    image: "Indy.png",
+    image: "Indy-256.png",
     description:
       "Wywy. Wywatronic. Bzz. Bzz! Een ware Saloen legend, sterker nog: Wywa is dé OG Indo die als eerste zijn bootje heeft aangelegd in het Saloen landschap. Nadat hij is uitgestapt is die nooit meer terug gegaan. En ook dit jaar gaat Indy het allemaal aan elkaar knopen!",
   },
   {
     name: "Nino",
-    image: "Nino.png",
+    image: "Nino-256.png",
     description:
       "Onze favoriete halfbloedje! Eerder bekend van zijn debut als PIET Saloen Radio! We spreken als organisatie namens het hele festival dat we enorm uitkijken waar deze vrolijke, positieve jonge legende mee gaat komen!",
   },
   {
     name: "Sebas",
-    image: "Sebas.png",
+    image: "Sebas-256.png",
     description:
       "Sebabes, Seboeber, Sebaber, Seboebie, Nipjes, Pepperoni bignip. Hoeveel nicknames kan je wel niet hebben?! Eén ding is zeker. Sebaba is altijd aan het schemen. Wat gaat deze jongeman dit jaar brengen?",
   },
   {
     name: "Vincent VIP",
-    image: "Vin.png",
+    image: "Vin-256.png",
     description:
       "Na een traumatisch ongeluk in Chiny was (V)innawhale down bad. De aankondiging van Steengoed Festival heeft hem weer op de been geholpen! Samen met (I)ndy en (P)im een hoeksteen van de Steengoede organisatie. Op welke manier horen we deze man terug op het festival!?",
   },
   {
     name: "Marcel",
-    image: "Marcel.png",
+    image: "Marcel-256.png",
     description:
       "JUJU DA PORRA!!! Een nieuwe aanwinst in de saloen. Wees niet gevreesd door zijn lengte, zijn kindness maakt er volop op goed! Jujuonthebeat is met vlag en wimpel geslaagd voor zijn eerste test: de silent disco. Nu zien we hem terug op Steengoed Festival. Lets go Marcel!",
   },
   {
     name: "Billy",
-    image: "Billy.png",
+    image: "Billy-256.png",
     description:
       '"Daar komt Billy en ik pop hem". \n\nDit is niet Billy zijn eerste rodeo. Ook niet zijn tweede. Uiteraard kon ook dit jaar meneer Garcia niet ontbreken. Na Billy zijn doorbraak in de nazomer van 2024, zijn alle ogen gericht op deze kanjer. Kan hij het waar maken en de fans geven wat ze willen?',
   },
   {
     name: "Marijn",
-    image: "Marijn.png",
+    image: "Marijn-256.png",
     description:
       'Van Saba tot Thailand; deze man is niet te vangen. Protector of Reefs. Je hebt het gehoord: "Our Ocean..". De rest hoeven we niet eens te zeggen. Ware legende. Reeds bekend van Merlinerbol.',
   },
   {
     name: "Moira",
-    image: "Mo.png",
+    image: "Mo-256.png",
     description:
       "Zonder Moira was het simpelweg een Sausage Festival. De enige bitta tussen al het testosteron geweld. Chef van de foodtrucks die ons op de been moeten houden. Wat kunnen we naast haar kookkunsten nog meer van Moter verwachten!?",
   },
   {
     name: "Rens",
-    image: "Rens.png",
+    image: "Rens-256.png",
     description:
       "Ontmaagd door de silent disco maakt onze Crxnk een reappearance op het Steengoed Festival! Zal deze professionele shooter ook op 6 september raak schieten? Een ding is zeker, Rens komt het festival verrijken met goede vibes!",
   },
   {
     name: "Kevin",
-    image: "Kevin.png",
+    image: "Kevin-256.png",
     description:
       "Kevin Cardoza. Wat zouden we zonder hem moeten? De levende legende met invloeden uit de braziliaanse favelas zal ook dit jaar de ogen op hem gericht hebben. Kan die de druk aan? Waar gaat die meekomen?",
   },
   {
     name: "Gerald",
-    image: "Gerald.png",
+    image: "Gerald-256.png",
     description:
       '"Am I right, Guys?" \nGerSquare. Man heeft zoveel Malphite gespeeld dat die zijn bouw heeft gemanifesteerd. Rock solid. De verwachtingen voor deze Filipino uit de Slums zijn torenhoog!',
   },
   {
     name: "Johan",
-    image: "Johan.png",
+    image: "Johan-256.png",
     description:
       '"Jeaannn op de beat" \n\nOnze eigen Sodomeister valt natuurlijk niet te missen. Leipe bars, gekke flows, top tier skits; wat heeft deze man niet in huis? Als je bad gaat kan je je melden bij de EHBO voor een potje met de dokter!',
   },
   {
     name: "Pim D",
-    image: "PimD.png",
+    image: "PimD-256.png",
     description:
       "Debuut! Wie is dat toch, een andere Pim? Meneer Deul zal dit jaar voor het eerst van de partij zijn. Al enige tijd bekend bij de Mansion, heeft hij nu ook een bruggetje geslagen naar de Saloen om zijn openheid en vriendelijkheid met iedereen te delen!",
   },
@@ -120,43 +120,43 @@ const attendingMembers = [
 const memoryMembers = [
   {
     name: "Deibeato ♰",
-    image: "David.png",
+    image: "David-256.png",
     description:
       "Silent Disco & Saloen Legend Deibeato Wienk zal helaas toch niet vlammen op het Steengoed Festival. Wel zal hij in spirit aanwezig zijn. David voorziet ons van een heerlijke set zodat we toch nog een beetje van zijn soesoe kunnen genieten!",
   },
   {
     name: "Florian ♰",
-    image: "Florian.png",
+    image: "Florian-256.png",
     description:
       "Voor de de gezellige Florian stonden alle signalen op groen om dit jaar te debuteren op Steengoed Festival. Helaas mocht het toch niet zo zijn. Hoewel het hem super leuk leek om erbij te zijn had hij helaas al andere plannen. Next time!",
   },
   {
     name: "Yiannis ♰",
-    image: "Yiannis.png",
+    image: "Yiannis-256.png",
     description:
       "Kers verse Papa Yiannis heeft de organisatie laten weten dat hij helaas niet aanwezig kan zijn op de festiviteiten. * Fart reference *",
   },
   {
     name: "Taran ♰",
-    image: "Taran.png",
+    image: "Taran-256.png",
     description:
       "Titty Blaster Taran heeft dit jaar helaas precies wat staan in het weekend van Steengoed Festival. We wensen je veel plezier en hopen dat je er volgende keer er gewoon weer bij bent, zoals het hoort!",
   },
   {
     name: "Jaimy ♰",
-    image: "Jaimy.png",
+    image: "Jaimy-256.png",
     description:
       "Bombooooopussyrasclat\nWe hopen dat Jaimy evenals de rest van ons over de teleurstelling kan stappen van zijn afwezigheid dit jaar. Geen Tanojo.. Wel gaan we onze Indonesische/Chinese beer voorzien van een livestream zodat die lekker in de Ardennen kan meegenieten!",
   },
   {
     name: "Ryan ♰",
-    image: "Ryan.png",
+    image: "Ryan-256.png",
     description:
       "Jullie lezen het goed, de enige echte DJ Onko heeft een officiële uitnodiging ontvangen voor het Steengoed Festival! Helaas komt het voor Ryan niet helemaal lekker uit (of we betalen te weinig).\nWie weet debuteert deze man op een latere editie!?",
   },
   {
     name: "Jeremy ♰",
-    image: "Jeremy.png",
+    image: "Jeremy-256.png",
     description:
       "Mr Hype. Jeremaya. Onze Jonge God - altijd vol van energie. Het gemis zal voelbaar zijn! Onderstaand een inzicht in de 180 die deze jongen op ons gooide:\n\n[21:34, 09-07-2025] Jeremy: LETS FUCKING GOOOOOO BROOOOOOOOO\n[21:34, 09-07-2025] Jeremy: FIREEEEEEEEE 🔥🔥🔥🔥\n[21:34, 09-07-2025] Jeremy: Ik kan dat weekend niet 😭",
   },
@@ -346,8 +346,8 @@ export default function LedenlijstPage() {
                           <Image
                             src={`/profiles/${member.image}`}
                             alt={member.name}
-                            width={200}
-                            height={200}
+                            width={256}
+                            height={256}
                             sizes="256px"
                             className="w-full h-full object-cover"
                           />
@@ -395,8 +395,8 @@ export default function LedenlijstPage() {
                           <Image
                             src={`/profiles/memory/${member.image}`}
                             alt={member.name}
-                            width={200}
-                            height={200}
+                            width={256}
+                            height={256}
                             sizes="256px"
                             className="w-full h-full object-cover"
                           />
