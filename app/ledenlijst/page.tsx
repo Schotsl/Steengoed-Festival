@@ -348,6 +348,7 @@ export default function LedenlijstPage() {
                             alt={member.name}
                             width={200}
                             height={200}
+                            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 16vw"
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -396,6 +397,7 @@ export default function LedenlijstPage() {
                             alt={member.name}
                             width={200}
                             height={200}
+                            sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 14vw"
                             className="w-full h-full object-cover"
                           />
                         </div>
