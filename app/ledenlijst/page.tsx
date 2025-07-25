@@ -166,6 +166,7 @@ export default function LedenlijstPage() {
   const [mounted, setMounted] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [openCard, setOpenCard] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -186,6 +187,10 @@ export default function LedenlijstPage() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const handleCardClick = (memberName: string) => {
+    setOpenCard(openCard === memberName ? null : memberName);
   };
 
   return (
@@ -339,9 +344,18 @@ export default function LedenlijstPage() {
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
                 {attendingMembers.map((member) => (
-                  <HoverCard key={member.name} openDelay={100} closeDelay={100}>
+                  <HoverCard
+                    key={member.name}
+                    openDelay={100}
+                    closeDelay={100}
+                    open={openCard === member.name}
+                    onOpenChange={(open) => !open && setOpenCard(null)}
+                  >
                     <HoverCardTrigger asChild>
-                      <button className="group relative">
+                      <button
+                        className="group relative"
+                        onClick={() => handleCardClick(member.name)}
+                      >
                         <div className="aspect-square rounded-xl overflow-hidden border-2 border-white/20 group-hover:border-orange-300/60 transition-all duration-300 group-hover:scale-105 shadow-lg">
                           <Image
                             src={`/profiles/${member.image}`}
@@ -388,9 +402,18 @@ export default function LedenlijstPage() {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-6">
                 {memoryMembers.map((member) => (
-                  <HoverCard key={member.name} openDelay={100} closeDelay={100}>
+                  <HoverCard
+                    key={member.name}
+                    openDelay={100}
+                    closeDelay={100}
+                    open={openCard === member.name}
+                    onOpenChange={(open) => !open && setOpenCard(null)}
+                  >
                     <HoverCardTrigger asChild>
-                      <button className="group relative">
+                      <button
+                        className="group relative"
+                        onClick={() => handleCardClick(member.name)}
+                      >
                         <div className="aspect-square rounded-xl overflow-hidden border-2 border-white/20 group-hover:border-orange-300/60 transition-all duration-300 group-hover:scale-105 shadow-lg filter grayscale group-hover:grayscale-0">
                           <Image
                             src={`/profiles/memory/${member.image}`}
