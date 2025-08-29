@@ -84,6 +84,12 @@ export default function SharedLayout({
                 Announcements
               </Link>
               <Link
+                href="/poster"
+                className="text-amber-100 hover:text-orange-300 transition-colors font-medium bg-black/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20"
+              >
+                Programma
+              </Link>
+              <Link
                 href="/faq"
                 className="text-amber-100 hover:text-orange-300 transition-colors font-medium bg-black/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20"
               >
@@ -129,6 +135,13 @@ export default function SharedLayout({
                       className="block text-gray-800 hover:text-orange-600 transition-colors font-medium text-lg py-3 border-b border-gray-100"
                     >
                       Announcements
+                    </Link>
+                    <Link
+                      href="/poster"
+                      onClick={closeMobileMenu}
+                      className="block text-gray-800 hover:text-orange-600 transition-colors font-medium text-lg py-3 border-b border-gray-100"
+                    >
+                      Programma
                     </Link>
                     <Link
                       href="/faq"

@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-export default function HomePage() {
-  const [mounted, setMounted] = useState(false);
+export default function PosterPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -31,22 +31,20 @@ export default function HomePage() {
     setIsMobileMenuOpen(false);
   };
 
-  const marginValue = isDesktop ? "-64px" : "-48px";
-
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Background Image */}
+    <div className="min-h-screen relative">
+      {/* Background */}
       <div className="fixed inset-0 z-0">
         <Image
           src="/images/banner-concept.png"
-          alt="Steengoed Festival Background"
+          alt="Background"
           fill
           className="object-cover object-center"
           priority
         />
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Content Overlay */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Navigation */}
         <nav className="px-8 md:px-12 py-8 md:py-6 flex-shrink-0">
@@ -179,9 +177,9 @@ export default function HomePage() {
           </div>
         )}
 
-        {/* Main Content */}
-        <div className="flex-1 flex items-center justify-center px-8 py-6">
-          <div className="text-center">
+        {/* Main Content - Poster Display */}
+        <div className="flex-1 flex items-center justify-center px-8 md:px-12 py-12">
+          <div className="w-full max-w-4xl mx-auto">
             <div
               className={`transition-all duration-1000 ${
                 mounted
@@ -189,42 +187,27 @@ export default function HomePage() {
                   : "opacity-0 transform translate-y-8"
               }`}
             >
-              <Image
-                src="/images/logo.png"
-                alt="Steengoed Festival Logo"
-                width={400}
-                height={300}
-                className="mx-auto hover:scale-110 hover:rotate-2 hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer"
-                style={{
-                  filter: "drop-shadow(rgba(0, 0, 0, 0.25) 0px 2rem 20px)",
-                  animation: "floatAndRotate 5.5s ease-in-out infinite",
-                  marginTop: marginValue,
-                }}
-              />
+              <div className="relative">
+                <Image
+                  src="/images/background.jpeg"
+                  alt="Steengoed Festival Poster"
+                  width={800}
+                  height={1200}
+                  className="mx-auto max-w-full h-auto"
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 800px"
+                  style={{
+                    filter: "drop-shadow(rgba(0, 0, 0, 0.5) 0px 20px 40px)",
+                    maxHeight: "80vh",
+                    width: "auto",
+                    borderRadius: "16px",
+                  }}
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes floatAndRotate {
-          0% {
-            transform: translateY(0px) translateX(0px) rotate(0deg);
-          }
-          25% {
-            transform: translateY(-12px) translateX(-5px) rotate(1.5deg);
-          }
-          50% {
-            transform: translateY(-8px) translateX(8px) rotate(-1deg);
-          }
-          75% {
-            transform: translateY(-15px) translateX(-3px) rotate(2.5deg);
-          }
-          100% {
-            transform: translateY(0px) translateX(0px) rotate(0deg);
-          }
-        }
-      `}</style>
     </div>
   );
 }
