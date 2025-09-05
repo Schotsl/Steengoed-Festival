@@ -3,12 +3,15 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function PosterPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [scrollContainer, setScrollContainer] = useState<HTMLDivElement | null>(
+    null
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -29,6 +32,20 @@ export default function PosterPage() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const scrollLeft = () => {
+    if (scrollContainer) {
+      const imageWidth = 600 + 32; // image width + gap
+      scrollContainer.scrollBy({ left: -imageWidth, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainer) {
+      const imageWidth = 600 + 32; // image width + gap
+      scrollContainer.scrollBy({ left: imageWidth, behavior: "smooth" });
+    }
   };
 
   return (
@@ -177,9 +194,9 @@ export default function PosterPage() {
           </div>
         )}
 
-        {/* Main Content - Poster Display */}
-        <div className="flex-1 flex items-center justify-center px-8 md:px-12 py-12">
-          <div className="w-full max-w-4xl mx-auto">
+        {/* Main Content - Carousel Display */}
+        <div className="flex-1 flex items-center justify-center py-12">
+          <div className="w-full">
             <div
               className={`transition-all duration-1000 ${
                 mounted
@@ -187,22 +204,61 @@ export default function PosterPage() {
                   : "opacity-0 transform translate-y-8"
               }`}
             >
-              <div className="relative">
-                <Image
-                  src="/images/background.jpeg"
-                  alt="Steengoed Festival Poster"
-                  width={800}
-                  height={1200}
-                  className="mx-auto max-w-full h-auto"
-                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 800px"
+              {/* Custom Flexbox Carousel */}
+              <div className="relative w-full">
+                {/* Left Arrow - Desktop Only */}
+                <button
+                  onClick={scrollLeft}
+                  className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-amber-100 hover:bg-white/20 hover:text-white transition-all duration-300"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+
+                {/* Right Arrow - Desktop Only */}
+                <button
+                  onClick={scrollRight}
+                  className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-amber-100 hover:bg-white/20 hover:text-white transition-all duration-300"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+
+                {/* Scrollable container */}
+                <div
+                  ref={setScrollContainer}
+                  className="flex gap-6 md:gap-8 overflow-x-auto scrollbar-hide pb-4"
                   style={{
-                    filter: "drop-shadow(rgba(0, 0, 0, 0.5) 0px 20px 40px)",
-                    maxHeight: "80vh",
-                    width: "auto",
-                    borderRadius: "16px",
+                    scrollBehavior: "smooth",
+                    scrollSnapType: "x mandatory",
+                    paddingLeft: "50vw",
+                    paddingRight: "50vw",
                   }}
-                  priority
-                />
+                >
+                  {[1, 2, 3, 4, 5, 6].map((imageNumber) => (
+                    <div
+                      key={imageNumber}
+                      className="flex-shrink-0 flex justify-center"
+                      style={{
+                        scrollSnapAlign: "center",
+                        transform: "translateX(-50%)",
+                      }}
+                    >
+                      <Image
+                        src={`/images/carousel/${imageNumber}.jpeg`}
+                        alt={`Steengoed Festival Programma ${imageNumber}`}
+                        width={600}
+                        height={900}
+                        className="h-auto"
+                        sizes="(max-width: 768px) 80vw, 600px"
+                        style={{
+                          maxHeight: "75vh",
+                          width: "auto",
+                          borderRadius: "16px",
+                        }}
+                        priority={imageNumber === 1}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

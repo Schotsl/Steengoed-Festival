@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import TicketButton from "@/components/ticket-button";
-import EmailButton from "@/components/email-button";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -49,8 +47,6 @@ export default function RootLayout({
     <html lang="nl" className={montserrat.variable}>
       <body className={montserrat.className}>
         {children}
-        <EmailButton />
-        <TicketButton />
       </body>
     </html>
   );
